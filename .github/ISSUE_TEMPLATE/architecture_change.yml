@@ -1,0 +1,51 @@
+name: Architecture exception request
+description: Request approval before changing a frozen decision because of a verified blocker.
+title: "architecture: request exception for "
+labels:
+  - architecture
+  - needs-decision
+body:
+  - type: markdown
+    attributes:
+      value: Stop implementation until this request is explicitly approved.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Verified problem
+      description: Explain the blocker and provide reproducible evidence that the frozen design cannot satisfy the requirement.
+    validations:
+      required: true
+  - type: textarea
+    id: current_decision
+    attributes:
+      label: Frozen decision
+      description: Quote or precisely reference the current decision without reproducing large document sections.
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Options and tradeoffs
+      description: Compare preserving the current decision, the proposed exception, and credible alternatives.
+    validations:
+      required: true
+  - type: checkboxes
+    id: affected_artifacts
+    attributes:
+      label: Private planning artifacts affected
+      options:
+        - label: Research and feature specification
+        - label: Production architecture design
+        - label: Implementation roadmap
+  - type: textarea
+    id: impact
+    attributes:
+      label: Migration and compatibility impact
+      description: Cover code, data, APIs, tests, operations, security, performance, and rollback.
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Maintainer decision record
+      description: Reserved for explicit approval, rejection, conditions, and required document updates.

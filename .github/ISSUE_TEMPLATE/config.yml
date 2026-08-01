@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: ../../security/advisories/new
+    about: Report security issues privately through GitHub Security Advisories.
+  - name: Planning artifact policy
+    url: ../../blob/main/docs/PLANNING_ARTIFACT_POLICY.md
+    about: Understand how private planning artifacts govern public work.

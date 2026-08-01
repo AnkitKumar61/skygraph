@@ -1,0 +1,80 @@
+name: Bug report
+description: Report reproducible behavior that violates an approved requirement.
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Do not disclose vulnerabilities here; use private vulnerability reporting.
+  - type: input
+    id: plan_task
+    attributes:
+      label: Engineering Execution Plan task
+      description: Identify the task that introduced or owns this behavior.
+      placeholder: "Task 00"
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: State exactly what happened, including the complete safe error output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Cite the approved acceptance criterion, issue, contract, or test.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Provide the smallest deterministic sequence that reproduces the issue.
+      placeholder: |
+        1. Start ...
+        2. Send ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Frontend
+        - Backend domain/application
+        - Backend infrastructure/presentation
+        - C++ engine or N-API boundary
+        - PostgreSQL or Redis
+        - ML service
+        - Infrastructure, CI, or deployment
+        - Documentation
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include commit SHA, OS, browser/Node/compiler versions, and deployment environment.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add sanitized logs, screenshots, metrics, or fixture details.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Reporter checks
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: I removed secrets, private data, and proprietary data.
+          required: true
+        - label: This report does not request an unapproved architecture change.
+          required: true

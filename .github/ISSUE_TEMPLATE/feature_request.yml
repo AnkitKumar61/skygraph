@@ -1,0 +1,57 @@
+name: Approved-plan feature task
+description: Propose work that already fits the frozen architecture and roadmap.
+title: "feat: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: plan_task
+    attributes:
+      label: Engineering Execution Plan task
+      placeholder: "Task 00 — Task name"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal and user value
+      description: Describe the approved outcome, not a speculative implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List prerequisite task numbers and their completion state.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Provide observable, testable criteria from the execution plan.
+    validations:
+      required: true
+  - type: textarea
+    id: testing
+    attributes:
+      label: Required verification
+      description: List unit, integration, E2E, manual, performance, and security checks.
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Expected files and boundaries
+      description: Identify affected clean-architecture layers and deployable units.
+    validations:
+      required: true
+  - type: checkboxes
+    id: freeze
+    attributes:
+      label: Architecture freeze
+      options:
+        - label: The proposal preserves the frozen stack, folders, boundaries, stores, integration, deployment, and implementation order.
+          required: true
+        - label: The proposal introduces no placeholder implementation, fake behavior, skipped validation, or TODO comments.
+          required: true
