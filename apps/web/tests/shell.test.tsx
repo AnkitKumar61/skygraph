@@ -41,6 +41,9 @@ describe("application shell", () => {
   });
   it("provides a working unknown-route recovery", async () => {
     shell("/missing");
+    expect(
+      screen.getByRole("heading", { level: 1, name: "This view does not exist" }),
+    ).toBeDefined();
     await userEvent.click(screen.getByRole("link", { name: "Return to workspace" }));
     expect(screen.getByRole("heading", { name: "Air traffic network lab" })).toBeDefined();
   });
@@ -61,7 +64,7 @@ describe("application shell", () => {
       throw new Error("Retry was not started");
     };
     const fetchMock = vi
-      .fn()
+      .fn<typeof fetch>()
       .mockRejectedValueOnce(new TypeError("network"))
       .mockImplementationOnce(
         () =>
@@ -110,6 +113,25 @@ describe("application shell", () => {
     shell("/status");
     expect(await screen.findByRole("heading", { name: "The API is reachable" })).toBeDefined();
   });
+  it.each([true, false])(
+    "uses the correct health origin when development is %s",
+    async (development) => {
+      vi.stubEnv("DEV", development);
+      vi.stubEnv("VITE_API_BASE_URL", "https://api.example/api/v1");
+      vi.stubEnv("VITE_WS_URL", "wss://api.example");
+      const fetchMock = vi
+        .fn<typeof fetch>()
+        .mockResolvedValue(new Response(JSON.stringify({ status: "live" })));
+      vi.stubGlobal("fetch", fetchMock);
+      shell("/status");
+      await screen.findByRole("heading", { name: "The API is reachable" });
+      expect(fetchMock).toHaveBeenCalledTimes(1);
+      expect(fetchMock.mock.calls[0]?.[0]).toEqual(
+        new URL("/health/live", development ? window.location.origin : "https://api.example"),
+      );
+      expect(fetchMock.mock.calls[0]?.[1]?.signal).toBeInstanceOf(AbortSignal);
+    },
+  );
   it("escapes untrusted text and announces loading", () => {
     render(
       <StatePanel kind="loading" title="Loading">
@@ -132,6 +154,9 @@ describe("application shell", () => {
       </ErrorBoundary>,
     );
     expect(screen.queryByText("private credential")).toBeNull();
+    expect(
+      screen.getByRole("heading", { level: 1, name: "The workspace could not open" }),
+    ).toBeDefined();
     fail = false;
     await userEvent.click(screen.getByRole("button", { name: "Try again" }));
     expect(screen.getByText("Recovered")).toBeDefined();

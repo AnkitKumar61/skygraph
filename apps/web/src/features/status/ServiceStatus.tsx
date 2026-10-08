@@ -9,7 +9,10 @@ export function ServiceStatus() {
     queryKey: ["service", "liveness"],
     queryFn: async ({ signal }) => {
       const config = parsePublicConfig(import.meta.env);
-      const url = new URL("/health/live", config.apiBaseUrl);
+      const url = new URL(
+        "/health/live",
+        import.meta.env.DEV ? window.location.origin : config.apiBaseUrl,
+      );
       const response = await fetch(url, {
         signal: AbortSignal.any([signal, AbortSignal.timeout(5_000)]),
       });

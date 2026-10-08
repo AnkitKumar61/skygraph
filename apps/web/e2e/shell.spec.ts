@@ -12,6 +12,8 @@ test("production shell supports accessible navigation and responsive layout", as
   await page.screenshot({ path: testInfo.outputPath("workspace.png"), fullPage: true });
   await page.keyboard.press("Tab");
   await expect(page.getByRole("link", { name: "Skip to main content" })).toBeFocused();
+  await page.keyboard.press("Enter");
+  await expect(page.getByRole("main")).toBeFocused();
   expect(
     (
       await new AxeBuilder({ page })
@@ -23,6 +25,9 @@ test("production shell supports accessible navigation and responsive layout", as
     true,
   );
   await page.goto("/missing");
+  await expect(
+    page.getByRole("heading", { level: 1, name: "This view does not exist" }),
+  ).toBeVisible();
   await page.getByRole("link", { name: "Return to workspace" }).click();
   await expect(page.getByRole("heading", { name: "Air traffic network lab" })).toBeVisible();
   expect(errors).toEqual([]);

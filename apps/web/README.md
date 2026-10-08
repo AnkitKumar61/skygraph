@@ -15,6 +15,12 @@ reads browser-safe `VITE_` values from the root environment file. Use `pnpm buil
 bundle budget, and browser checks. Install the browser once with
 `pnpm exec playwright install chromium`.
 
+Start the API first using the instructions in `apps/api/README.md`, then start the web development
+server. In development, the health request uses a same-origin Vite proxy targeting the configured
+API origin. Only the exact `/health/live` path is proxied; this is not a production gateway or CORS
+policy. Production builds and `vite preview` continue to use the configured HTTPS API directly.
+Reserved `.test` addresses are test fixtures, not working local or staging API services.
+
 ## State Ownership
 
 React Query owns HTTP response state. The app-scoped Zustand store owns only algorithm selection,
@@ -41,6 +47,8 @@ through `VITE_API_BASE_URL` and `VITE_WS_URL`; do not use the local development 
 deployed build. These variables are public, compiled browser configuration, never secret storage.
 Credentials, query strings, and fragments are rejected. API credentials belong only in the backend.
 
-Browser tests intercept health requests with controlled responses and therefore verify client
-behavior, not staging availability. Real cross-origin deployment and staging checks are separate
-Task 05 gates.
+Production browser tests intercept health requests with controlled responses to verify client
+behavior. A separate local-flow suite starts the real API and development server and verifies the
+unintercepted health response, correlation header, refresh, and navigation on desktop and mobile.
+Build the API before running the browser suite. Real cross-origin deployment and staging checks
+remain separate Task 05 gates.

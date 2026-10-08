@@ -41,6 +41,7 @@ export function ApplicationRoutes() {
               path="*"
               element={
                 <StatePanel
+                  headingLevel={1}
                   title="This view does not exist"
                   action={
                     <Link className="button" to="/">

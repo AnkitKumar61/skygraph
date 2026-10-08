@@ -16,6 +16,7 @@ export class ErrorBoundary extends Component<
         <main id="main-content">
           <StatePanel
             kind="error"
+            headingLevel={1}
             title="The workspace could not open"
             action={
               <button className="button" onClick={() => this.setState({ failed: false })}>
