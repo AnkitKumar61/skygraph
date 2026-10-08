@@ -12,9 +12,11 @@
   },
   "scripts": {
     "build": "pnpm --recursive --if-present run build",
+    "bundle:check": "node scripts/check-bundle.mjs",
+    "test:e2e": "playwright test",
     "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run build && pnpm run test && pnpm run licenses:check",
-    "format": "prettier --write \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json}\" \"scripts/**/*.mjs\" \"*.{json,mjs,ts}\" pnpm-workspace.yaml .github/dependabot.yml",
-    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json}\" \"packages/**/*.{ts,tsx,json}\" \"scripts/**/*.mjs\" \"*.{json,mjs,ts}\" pnpm-workspace.yaml .github/dependabot.yml",
+    "format": "prettier --write \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,tsx,json}\" \"scripts/**/*.mjs\" \"*.{json,mjs,ts}\" pnpm-workspace.yaml .github/dependabot.yml",
+    "format:check": "prettier --check \"apps/**/*.{ts,tsx,json,css,html}\" \"packages/**/*.{ts,tsx,json}\" \"scripts/**/*.mjs\" \"*.{json,mjs,ts}\" pnpm-workspace.yaml .github/dependabot.yml",
     "licenses:check": "node scripts/check-licenses.mjs",
     "lint": "eslint . --max-warnings 0",
     "test": "vitest run",
