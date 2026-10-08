@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --build",
+    "start": "node dist/src/main.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
