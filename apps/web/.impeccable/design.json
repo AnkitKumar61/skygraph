@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T15:00:05.799Z",
+  "title": "Design System: SkyGraph",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Dark Ink",
+        "tonalRamp": [
+          "oklch(0.15 0.05 252)",
+          "oklch(0.26 0.05 252)",
+          "oklch(0.37 0.05 252)",
+          "oklch(0.48 0.05 252)",
+          "oklch(0.59 0.05 252)",
+          "oklch(0.7 0.05 252)",
+          "oklch(0.82 0.05 252)",
+          "oklch(0.95 0.05 252)"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Cool Canvas",
+        "tonalRamp": [
+          "oklch(0.15 0.008 253)",
+          "oklch(0.26 0.008 253)",
+          "oklch(0.37 0.008 253)",
+          "oklch(0.48 0.008 253)",
+          "oklch(0.59 0.008 253)",
+          "oklch(0.7 0.008 253)",
+          "oklch(0.82 0.008 253)",
+          "oklch(0.95 0.008 253)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "White Surface",
+        "tonalRamp": [
+          "oklch(0.15 0 0)",
+          "oklch(0.26 0 0)",
+          "oklch(0.37 0 0)",
+          "oklch(0.48 0 0)",
+          "oklch(0.59 0 0)",
+          "oklch(0.7 0 0)",
+          "oklch(0.82 0 0)",
+          "oklch(0.95 0 0)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Slate Text",
+        "tonalRamp": [
+          "oklch(0.15 0.043 253)",
+          "oklch(0.26 0.043 253)",
+          "oklch(0.37 0.043 253)",
+          "oklch(0.48 0.043 253)",
+          "oklch(0.59 0.043 253)",
+          "oklch(0.7 0.043 253)",
+          "oklch(0.82 0.043 253)",
+          "oklch(0.95 0.043 253)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Blue-Gray Line",
+        "tonalRamp": [
+          "oklch(0.15 0.023 253)",
+          "oklch(0.26 0.023 253)",
+          "oklch(0.37 0.023 253)",
+          "oklch(0.48 0.023 253)",
+          "oklch(0.59 0.023 253)",
+          "oklch(0.7 0.023 253)",
+          "oklch(0.82 0.023 253)",
+          "oklch(0.95 0.023 253)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Action Blue",
+        "tonalRamp": [
+          "oklch(0.15 0.18 260)",
+          "oklch(0.26 0.18 260)",
+          "oklch(0.37 0.18 260)",
+          "oklch(0.48 0.18 260)",
+          "oklch(0.59 0.18 260)",
+          "oklch(0.7 0.18 260)",
+          "oklch(0.82 0.18 260)",
+          "oklch(0.95 0.18 260)"
+        ]
+      },
+      "focus": {
+        "role": "focus",
+        "displayName": "Warm Amber",
+        "tonalRamp": [
+          "oklch(0.15 0.12 50)",
+          "oklch(0.26 0.12 50)",
+          "oklch(0.37 0.12 50)",
+          "oklch(0.48 0.12 50)",
+          "oklch(0.59 0.12 50)",
+          "oklch(0.7 0.12 50)",
+          "oklch(0.82 0.12 50)",
+          "oklch(0.95 0.12 50)"
+        ]
+      },
+      "rail": {
+        "role": "neutral",
+        "displayName": "Rail Mist",
+        "tonalRamp": [
+          "oklch(0.15 0.014 253)",
+          "oklch(0.26 0.014 253)",
+          "oklch(0.37 0.014 253)",
+          "oklch(0.48 0.014 253)",
+          "oklch(0.59 0.014 253)",
+          "oklch(0.7 0.014 253)",
+          "oklch(0.82 0.014 253)",
+          "oklch(0.95 0.014 253)"
+        ]
+      },
+      "navigation-ink": {
+        "role": "neutral",
+        "displayName": "Navigation Slate",
+        "tonalRamp": [
+          "oklch(0.15 0.05 252)",
+          "oklch(0.26 0.05 252)",
+          "oklch(0.37 0.05 252)",
+          "oklch(0.48 0.05 252)",
+          "oklch(0.59 0.05 252)",
+          "oklch(0.7 0.05 252)",
+          "oklch(0.82 0.05 252)",
+          "oklch(0.95 0.05 252)"
+        ]
+      },
+      "navigation-hover": {
+        "role": "neutral",
+        "displayName": "Hover Mist",
+        "tonalRamp": [
+          "oklch(0.15 0.028 253)",
+          "oklch(0.26 0.028 253)",
+          "oklch(0.37 0.028 253)",
+          "oklch(0.48 0.028 253)",
+          "oklch(0.59 0.028 253)",
+          "oklch(0.7 0.028 253)",
+          "oklch(0.82 0.028 253)",
+          "oklch(0.95 0.028 253)"
+        ]
+      },
+      "navigation-selected": {
+        "role": "primary",
+        "displayName": "Selected Blue",
+        "tonalRamp": [
+          "oklch(0.15 0.035 260)",
+          "oklch(0.26 0.035 260)",
+          "oklch(0.37 0.035 260)",
+          "oklch(0.48 0.035 260)",
+          "oklch(0.59 0.035 260)",
+          "oklch(0.7 0.035 260)",
+          "oklch(0.82 0.035 260)",
+          "oklch(0.95 0.035 260)"
+        ]
+      },
+      "action-ink": {
+        "role": "primary",
+        "displayName": "Blue Action Ink",
+        "tonalRamp": [
+          "oklch(0.15 0.16 260)",
+          "oklch(0.26 0.16 260)",
+          "oklch(0.37 0.16 260)",
+          "oklch(0.48 0.16 260)",
+          "oklch(0.59 0.16 260)",
+          "oklch(0.7 0.16 260)",
+          "oklch(0.82 0.16 260)",
+          "oklch(0.95 0.16 260)"
+        ]
+      },
+      "action-hover": {
+        "role": "primary",
+        "displayName": "Deep Action Blue",
+        "tonalRamp": [
+          "oklch(0.15 0.14 260)",
+          "oklch(0.26 0.14 260)",
+          "oklch(0.37 0.14 260)",
+          "oklch(0.48 0.14 260)",
+          "oklch(0.59 0.14 260)",
+          "oklch(0.7 0.14 260)",
+          "oklch(0.82 0.14 260)",
+          "oklch(0.95 0.14 260)"
+        ]
+      },
+      "action-secondary": {
+        "role": "primary",
+        "displayName": "Pale Action Blue",
+        "tonalRamp": [
+          "oklch(0.15 0.022 260)",
+          "oklch(0.26 0.022 260)",
+          "oklch(0.37 0.022 260)",
+          "oklch(0.48 0.022 260)",
+          "oklch(0.59 0.022 260)",
+          "oklch(0.7 0.022 260)",
+          "oklch(0.82 0.022 260)",
+          "oklch(0.95 0.022 260)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "View Headline",
+        "purpose": "Fluid page heading, balanced wrapping."
+      },
+      "title": {
+        "displayName": "State Title",
+        "purpose": "Reusable state-panel heading."
+      },
+      "body": {
+        "displayName": "Operating Body",
+        "purpose": "Explanations bounded to a readable measure."
+      },
+      "label": {
+        "displayName": "Navigation Label",
+        "purpose": "Text-only operating navigation."
+      },
+      "action": {
+        "displayName": "Action Label",
+        "purpose": "Primary and secondary controls."
+      },
+      "context": {
+        "displayName": "Context Body",
+        "purpose": "Subordinate educational explanations."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-background",
+        "value": "background-color .16s ease-out",
+        "purpose": "Button state transition only when reduced motion is not requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "context-stack",
+        "value": "1100px"
+      },
+      {
+        "name": "navigation-top",
+        "value": "680px"
+      }
+    ],
+    "focus": {
+      "value": "3px solid var(--focus)",
+      "offset": "4px",
+      "purpose": "Shared visible keyboard focus."
+    },
+    "accessibility": {
+      "forcedColors": "Current navigation uses a 2px solid Highlight outline; buttons use a ButtonText border.",
+      "reducedMotion": "Button transitions are absent when reduced motion is requested."
+    },
+    "tonalRampNote": "Synthesized OKLCH exploration ramps, dark to light; these are not additional shipped tokens."
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Prominent navigation or recovery action.",
+      "html": "<button class=\"ds-button\">Retry connection</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid transparent;border-radius:8px;background:var(--accent);color:#fff;font-family:\"Segoe UI\",system-ui,sans-serif;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer}.ds-button:hover{background:#104a9f}.ds-button:focus-visible{outline:3px solid var(--focus);outline-offset:4px}.ds-button:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:no-preference){.ds-button{transition:background-color .16s ease-out}}@media(forced-colors:active){.ds-button{border-color:ButtonText}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Lower-emphasis repeat health check.",
+      "html": "<button class=\"ds-button ds-secondary\">Check again</button>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid transparent;border-radius:8px;background:var(--accent);color:#fff;font-family:\"Segoe UI\",system-ui,sans-serif;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer}.ds-button:hover{background:#104a9f}.ds-button:focus-visible{outline:3px solid var(--focus);outline-offset:4px}.ds-button:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:no-preference){.ds-button{transition:background-color .16s ease-out}}@media(forced-colors:active){.ds-button{border-color:ButtonText}}.ds-button.ds-secondary{background:#e7effa;color:#124fae}"
+    },
+    {
+      "name": "Primary Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-item",
+      "description": "Text-only route list with a current-page surface.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Primary\"><a href=\"/\" aria-current=\"page\">Workspace</a><a href=\"/status\">Service status</a></nav>",
+      "css": ".ds-nav{display:flex;flex-direction:column;gap:8px;font-family:\"Segoe UI\",system-ui,sans-serif;}.ds-nav a{padding:12px 16px;min-height:44px;border-radius:8px;text-decoration:none;color:#384f69;font-weight:550}.ds-nav a:hover{background:#dde7f3}.ds-nav a[aria-current=\"page\"]{color:#124fae;background:#d8e6fa}.ds-nav a:focus-visible{outline:3px solid var(--focus);outline-offset:4px}@media(max-width:680px){.ds-nav{flex-direction:row;flex-wrap:wrap}}@media(forced-colors:active){.ds-nav a[aria-current=\"page\"]{outline:2px solid Highlight}}"
+    },
+    {
+      "name": "State Panel",
+      "kind": "card",
+      "refersTo": "state-panel",
+      "description": "A truthful title and explanation, optionally accompanied by an action.",
+      "html": "<section class=\"ds-state\"><h2>Your network workspace is ready</h2><p>Flight data is not connected yet. When a feed is available, this space will show the network and its current data state.</p><a class=\"ds-button\" href=\"/status\">Check service status</a></section>",
+      "css": ".ds-state{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(24px,4vw,48px);max-width:850px;color:#17283c;font-family:\"Segoe UI\",system-ui,sans-serif;}.ds-state h2{margin:0;font-size:1.35rem;font-weight:650;line-height:1.3}.ds-state p{color:var(--muted);line-height:1.65;max-width:68ch;margin:14px 0 28px}.ds-button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 18px;border:1px solid transparent;border-radius:8px;background:var(--accent);color:#fff;font-family:\"Segoe UI\",system-ui,sans-serif;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer}.ds-button:hover{background:#104a9f}.ds-button:focus-visible{outline:3px solid var(--focus);outline-offset:4px}.ds-button:disabled{opacity:.65;cursor:wait}@media(prefers-reduced-motion:no-preference){.ds-button{transition:background-color .16s ease-out}}@media(forced-colors:active){.ds-button{border-color:ButtonText}}"
+    },
+    {
+      "name": "Contextual Explanation",
+      "kind": "custom",
+      "description": "Open explanatory sections separated by a thin rule.",
+      "html": "<aside class=\"ds-context\"><h3>Read the evidence</h3><p>Results will distinguish observed data from simulation output, with explicit assumptions and algorithm tradeoffs.</p><hr><h3>Educational use</h3><p>SkyGraph supports learning and simulation. It is not intended for operational navigation or air traffic control.</p></aside>",
+      "css": ".ds-context{padding-top:8px;color:#17283c;font-family:\"Segoe UI\",system-ui,sans-serif;}.ds-context h3{margin:0;font-size:1rem;font-weight:650}.ds-context p{margin:12px 0 0;color:var(--muted);font-size:.92rem;line-height:1.65;max-width:68ch}.ds-context hr{border:0;border-top:1px solid var(--line);margin:28px 0}@media(max-width:1100px){.ds-context{max-width:65ch}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Analytical Workbench",
+    "overview": "SkyGraph is a quiet, precise operating environment. Pale blue-gray surfaces, dark ink, and restrained blue actions support scanning and recovery without competing with the content. The system UI face is a deliberate choice for sustained use; this is an operating interface, not a display-led brand treatment.\n\nThe shipped shell is spacious but bounded: compact navigation, a dominant working area, and subordinate explanatory text. Empty, loading, unavailable-service, and unexpected-error views share the same calm container language. The interface communicates what is known through explicit wording rather than decorative status theater.",
+    "keyCharacteristics": [
+      "Cool tonal surfaces with restrained blue actions.",
+      "Compact controls inside a spacious, bounded workspace.",
+      "System UI typography with clear weight and size hierarchy.",
+      "Text-led states, visible focus, and minimal motion."
+    ],
+    "rules": [
+      {
+        "name": "The Action Blue Rule",
+        "body": "Reserve saturated blue for actionable elements and current navigation; explanatory surfaces remain cool and quiet.",
+        "section": "colors"
+      },
+      {
+        "name": "The Words Before Color Rule",
+        "body": "State messages name the condition and recovery action; a colored mark alone never communicates availability.",
+        "section": "colors"
+      },
+      {
+        "name": "The Operating Type Rule",
+        "body": "Keep operating text in the shared UI stack; use the existing hierarchy rather than introducing display branding into task controls.",
+        "section": "typography"
+      },
+      {
+        "name": "The Bounded Workspace Rule",
+        "body": "Let the working region grow, but constrain explanatory line lengths and state-panel width; extra viewport space is not a reason to stretch prose.",
+        "section": "layout"
+      },
+      {
+        "name": "The Tonal Depth Rule",
+        "body": "Separate regions with tone and a restrained border; do not add floating-card shadows to the established workbench.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do use the shared UI type stack and recorded hierarchy for operating surfaces.",
+      "Do preserve explicit state wording and real recovery actions.",
+      "Do keep keyboard focus visible and honor reduced-motion and forced-color preferences.",
+      "Do separate the main working area from bounded explanatory text."
+    ],
+    "donts": [
+      "Don't imply available flight data from an API health response.",
+      "Don't replace textual state explanations with color-only indicators.",
+      "Don't add shadows to the flat tonal surface system.",
+      "Don't document unimplemented maps, graphs, metrics, or simulation results as existing components."
+    ]
+  }
+}
